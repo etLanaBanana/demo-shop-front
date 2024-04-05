@@ -99,7 +99,6 @@ export default function Registration() {
 
         return (
             <div className="w-full h-full flex items-center justify-center">
-                <img src="/images/fon.png" alt="Фон" className="w-full h-full object-cover"/>
                 <div className="absolute top-0 right-0 flex flex-col justify-start items-end p-4 space-y-4">
                     <Button className='border border-white'>
                         <Link href='/'>
