@@ -30,30 +30,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
                 {component.description}
             </ListItem>
         ), []);
-//     const breadCumbs: { title: string; href: string }[] = [
-//         {
-//             title: "Каталог",
-//             href: "/"
-//         },
-//         {
-//             title: "Наши магазины",
-//             href: "/"
-//         },
-//         {
-//             title: "Акции",
-//             href: "/"
-//         },
-//         {
-//             title: "Контакты",
-//             href: "/"
-//         },
-//         {
-//             title: "Вопросы",
-//             href: "/"
-//
-//         },
-//
-//     ]
+
     return (
         <html lang="en">
         <body className={concatTailwindClasses(inter.className,
