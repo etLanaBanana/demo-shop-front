@@ -4,7 +4,7 @@ import React, {useContext} from 'react';
 import {AuthContext} from "@/lib/AuthContext";
 import Header from "@/components/common/Header";
 
-import {
+    import {
     ColumnFiltersState,
     SortingState,
     VisibilityState,
@@ -16,9 +16,9 @@ import {
     useReactTable,
 } from "@tanstack/react-table"
 
-import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import {
+    import {Button} from "@/components/ui/button"
+    import {Input} from "@/components/ui/input"
+    import {
     Table,
     TableBody,
     TableCell,
@@ -27,10 +27,10 @@ import {
     TableRow,
 } from "@/components/ui/table"
 
-import {categoriesSchema} from './new/categories.schema';
-import data from "@/app/categories/new/categories.data";
-import Link from "next/link";
-import {routs} from "@/utils/routs";
+    import {categoriesSchema} from './new/categories.schema'
+import data from "@/app/categories/new/categories.data"
+import Link from "next/link"
+import {routs} from "@/utils/routs"
 
 
 const CategoriesPage = () => {
@@ -39,6 +39,7 @@ const CategoriesPage = () => {
         setAuthedUserInfo(null);
         setLoggedStatus(false);
     };
+
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -52,11 +53,11 @@ const CategoriesPage = () => {
         setSorting(newSorting);
     };
     const handleSortByName = () => {
-        setSorting([{ id: 'titleCategory', desc: false }]);
+        setSorting([{id: 'titleCategory', desc: false}]);
     };
 
     const handleSortById = () => {
-        setSorting([{ id: 'id', desc: false }]);
+        setSorting([{id: 'id', desc: false}]);
     };
 
     const table = useReactTable({
@@ -83,7 +84,8 @@ const CategoriesPage = () => {
     // @ts-ignore
     return (
         <div>
-            <div className="max-h-max"><Header loggedStatus={loggedStatus} handleLogout={handleLogout}/></div>
+            <div className="max-h-max"><Header loggedStatus={loggedStatus} handleLogout={handleLogout}/>
+            </div>
             <div className="w-full max-w-screen-xl mx-auto">
                 <div className="flex items-center py-8">
                     <Input
@@ -174,7 +176,8 @@ const CategoriesPage = () => {
             </div>
         </div>
 
-)
-}
+    );
+};
+
 
 export default CategoriesPage;

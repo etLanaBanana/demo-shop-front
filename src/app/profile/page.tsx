@@ -33,16 +33,19 @@ const ProfilePage = () => {
                     <div>
                         <div>
                             <div>
+
                                 <p>Логин: {authedUserInfo ? authedUserInfo.login : ''}</p>
                                 <p>Фамилия: {authedUserInfo ? authedUserInfo.lastName : ''}</p>
                                 <p>Имя: {authedUserInfo ? authedUserInfo.firstName : ''}</p>
                                 <p>Отчество: {authedUserInfo ? authedUserInfo.secondName : ''}</p>
                                 <p>Email: {authedUserInfo ? authedUserInfo.email : ''}</p>
-                                    {loggedStatus ? (
-                                        <Link href={routs.updateProfile} className="text-yellow-200 hover:underline">Редактировать профиль</Link>
-                                    ) : (
-                                        <p><Link href={routs.authorisation} className="text-yellow-200 hover:underline">Вам необходимо войти</Link></p>)}
-
+                                {loggedStatus ? (
+                                    <Link href={routs.updateProfile} className="text-yellow-200 hover:underline">Редактировать
+                                        профиль</Link>
+                                ) : (
+                                    <p><Link href={routs.authorisation} className="text-yellow-200 hover:underline">Вам
+                                        необходимо войти</Link></p>
+                                )}
                             </div>
                         </div>
                     </div>

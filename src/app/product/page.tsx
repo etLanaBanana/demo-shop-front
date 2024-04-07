@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useContext} from 'react';
+
 import {AuthContext} from "@/lib/AuthContext";
 import Header from "@/components/common/Header";
 import {Button} from "@/components/ui/button";
@@ -25,14 +25,13 @@ import {Input} from "@/components/ui/input";
 import Link from "next/link";
 import {routs} from "@/utils/routs";
 import {authUser, UserQuery} from "@/api/AuthAndRegistration";
-
 import {useRouter} from "next/navigation";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {useContext} from "react";
 
 // @ts-ignore
 const ProductPage = ({product: product}) => {
@@ -142,7 +141,8 @@ const ProductPage = ({product: product}) => {
                                                                                name='password'
                                                                                render={({field}) => (
                                                                                    <FormItem>
-                                                                                       <FormLabel htmlFor="password" className="text-black">
+                                                                                       <FormLabel htmlFor="password"
+                                                                                                  className="text-black">
                                                                                            Пароль
                                                                                        </FormLabel>
                                                                                        <FormControl>
@@ -184,17 +184,18 @@ const ProductPage = ({product: product}) => {
                                                             <DialogTrigger>
                                                                 <div>
                                                                     <Button variant="outline"
-                                                                             className="m-2">Пока жми
-                                                                    сюда</Button>
+                                                                            className="m-2">Пока жми
+                                                                        сюда</Button>
                                                                 </div>
                                                             </DialogTrigger>
                                                             <DialogContent className="sm:max-w-[425px] bg-gray-500">
                                                                 <DialogHeader>
                                                                     <DialogTitle>Чтобы добавить категорию необходимо
-                                                                        <div className="m-4"><Link href={routs.authorisation}
-                                                                                                   className="text-yellow-400 hover:underline"> ВОЙТИ   </Link>
+                                                                        <div className="m-4"><Link
+                                                                            href={routs.authorisation}
+                                                                            className="text-yellow-400 hover:underline"> ВОЙТИ </Link>
                                                                             или <Link href={routs.authorisation}
-                                                                                      className="text-yellow-400 hover:underline">   ЗАРЕГИСТРИРОВАТЬСЯ </Link>
+                                                                                      className="text-yellow-400 hover:underline"> ЗАРЕГИСТРИРОВАТЬСЯ </Link>
                                                                         </div>
                                                                     </DialogTitle>
 

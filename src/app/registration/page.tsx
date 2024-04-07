@@ -103,9 +103,19 @@ export default function Registration() {
         })
 
         return (
+<<<<<<< HEAD
             <div>
                 <div>
                     <Header loggedStatus={loggedStatus} handleLogout={handleLogout}/>
+=======
+            <div className="w-full h-full flex items-center justify-center">
+                <div className="absolute top-0 right-0 flex flex-col justify-start items-end p-4 space-y-4">
+                    <Button className='border border-white'>
+                        <Link href='/'>
+                            Вернуться на главную страницу
+                        </Link>
+                    </Button>
+>>>>>>> origin/main
                 </div>
                 <div className="w-full h-full flex items-center justify-center">
                     <div className="absolute top-0  flex  justify-center items-start space-y-4">

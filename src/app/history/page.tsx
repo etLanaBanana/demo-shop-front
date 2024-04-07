@@ -2,13 +2,8 @@
 
 import React, {useContext} from 'react';
 import {AuthContext} from "@/lib/AuthContext";
+// @ts-ignore
 import Header from "@/components/common/Header";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import Link from "next/link";
-import {routs} from "@/utils/routs";
 import {Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 
 const HistoryPage = () => {
@@ -42,6 +37,7 @@ const HistoryPage = () => {
                     </TableFooter>
                 </Table>
             </div>
+            <div>История</div>
         </div>
     );
 };

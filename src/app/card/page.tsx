@@ -2,6 +2,7 @@
 
 import React, {useContext} from 'react';
 import {AuthContext} from "@/lib/AuthContext";
+// @ts-ignore
 import Header from "@/components/common/Header";
 import {
     Table,
@@ -13,6 +14,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 
+
 const CartPage = () => {
     const {authedUserInfo, setAuthedUserInfo, setLoggedStatus, loggedStatus} = useContext(AuthContext);
     const handleLogout = () => {
@@ -20,7 +22,7 @@ const CartPage = () => {
         setLoggedStatus(false);
     };
     return (
-        <div className="w-[50rem]">
+        <div className="m-[50rem]">
             <div>
                 <Header loggedStatus={loggedStatus} handleLogout={handleLogout}/>
             </div>
@@ -45,6 +47,5 @@ const CartPage = () => {
             </div>
         </div>
     );
-};
-
+}
 export default CartPage;
